@@ -1,3 +1,3 @@
 module.exports = {
-  secret: "demo-secret-key",
+  secret: process.env.ACCESS_TOKEN_SECRET_KEY,
 };
