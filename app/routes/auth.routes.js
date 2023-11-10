@@ -23,7 +23,7 @@ module.exports = function (app) {
   app.get("/api/auth/me", [authJwt.verifyToken], async (req, res) => {
     const id = req.userId;
     const user = await db.user.findOne({
-      attributes: ["id", "username"],
+      attributes: ["id", "email"],
       where: { id },
     });
     res.status(200).send(user);
